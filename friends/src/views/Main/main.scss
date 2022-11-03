@@ -1,0 +1,24 @@
+@import 'src/styles/colors';
+
+.friends-list {
+
+  &__wrapper {
+    max-height: 634px;
+    max-width: 714px;
+    margin: auto;
+    background-color: $c-white;
+    padding: 30px 40px 0;
+    color: $c-dark-pink;
+  }
+
+  &-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 24px;
+  }
+
+  &__container {
+    width: 100%;
+  }
+}
