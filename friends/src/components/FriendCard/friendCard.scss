@@ -6,28 +6,66 @@
     display: flex;
     box-shadow: 0 10px 20px $bs-black;
     border-radius: 8px;
+    padding: 14px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  &__content {
+    display: flex;
+    grid-gap: 14px;
   }
 
   &__image {
     width: 60px;
     height: 60px;
+    background-color: red;
+    border-radius: 4px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__header {
+    display: flex;
+    grid-gap: 4px;
+    flex-direction: column;
+  }
 
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $c-black;
+    margin: 0;
+  }
+
+  &__status {
+    padding: 0 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    border: 1px solid $c-dark-pink;
+    border-radius: 20px;
+    max-width: fit-content;
   }
 
   &__button {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 8px 20px;
-    gap: 8px;
     width: 93px;
     height: 40px;
     background: $c-blue;
     border: 1px solid $c-dark-blue;
     border-radius: 4px;
+    color: $c-white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
   }
 }

@@ -1,17 +1,25 @@
 import React from 'react';
 import './friendCard.scss'
+import avatar from 'assets/images/Jeremy.png'
+import { IFriend } from 'store/Friends/friendsTypes';
 
+interface Props {
+    friend: IFriend;
+}
 
-export const FriendCard = () => {
+export const FriendCard = ({ friend }: Props) => {
 
     return (
         <div className="friend-card">
             <div className="friend-card__container">
-                <div className="friend-card__image">
-
-                </div>
-                <div className="friend-card__header">
-
+                <div className="friend-card__content">
+                    <div className="friend-card__image">
+                        <img src={avatar}/>
+                    </div>
+                    <div className="friend-card__header">
+                        <p className="friend-card__name">{`${friend.firstName} ${friend.lastName}`}</p>
+                        <div className="friend-card__status">At work</div>
+                    </div>
                 </div>
                 <button className="friend-card__button">Details</button>
             </div>

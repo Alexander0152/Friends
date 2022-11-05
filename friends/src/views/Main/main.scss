@@ -1,24 +1,51 @@
 @import 'src/styles/colors';
 
 .friends-list {
+  margin: 195px auto;
 
   &__wrapper {
-    max-height: 634px;
     max-width: 714px;
     margin: auto;
     background-color: $c-white;
-    padding: 30px 40px 0;
     color: $c-dark-pink;
   }
 
   &-title {
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 26px;
     line-height: 24px;
-    margin: 0 0 24px;
+    margin: 0;
+    padding: 30px 40px 14px;
   }
 
   &__container {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 14px;
+    max-width: 100%;
+    max-height: 556px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 10px 40px 0;
+
+    scrollbar-color: $c-dark-pink $c-dark-pink-fade;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: $c-dark-pink-fade;
+      //opacity: 0.3;
+      border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $c-dark-pink;
+      border-radius: 8px;
+      opacity: 0.3;
+    }
+
   }
 }
