@@ -1,0 +1,72 @@
+@import 'src/styles/colors';
+
+.friend-details-card {
+  background-color: $c-pink-white;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  border-radius: 8px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border-radius: 4px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    color: $c-black;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    margin: 23px 0 10px;
+  }
+
+  &__status {
+    max-width: fit-content;
+  }
+}
+
+.friend-details-content {
+  display: flex;
+  flex-direction: column;
+
+  &__box {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 28px;
+    background: $c-white;
+    box-shadow: 0 10px 20px rgba(204, 208, 223, 0.5);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__switcher {
+    display: flex;
+  }
+
+  &__toggle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $c-black-fade;
+  }
+}

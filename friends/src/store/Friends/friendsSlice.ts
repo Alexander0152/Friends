@@ -1,11 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { IFriend, IFriendsStateType } from './friendsTypes';
-import { getFriendsThunk } from './friendsThunk';
+import { IFriend, IFriendDetails, IFriendsStateType } from './friendsTypes';
+import { getFriendDetailsThunk, getFriendsThunk } from './friendsThunk';
 
 const initialState: IFriendsStateType = {
     friendsList: [],
-    currentFriendId: null
+    currentFriendId: null,
+    currentFriendDetails: null
 };
 
 const friendsSlice = createSlice({
@@ -20,6 +21,9 @@ const friendsSlice = createSlice({
         builder
             .addCase(getFriendsThunk.fulfilled, (state, { payload }: PayloadAction<IFriend[]>) => {
                 state.friendsList = payload;
+            })
+            .addCase(getFriendDetailsThunk.fulfilled, (state, { payload }: PayloadAction<IFriendDetails>) => {
+                state.currentFriendDetails = payload;
             })
     }
 });

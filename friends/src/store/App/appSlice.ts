@@ -3,7 +3,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import { IAppStateType } from './appTypes';
 
 const initialState: IAppStateType = {
-    someField: true,
     loadingCount: 0
 };
 

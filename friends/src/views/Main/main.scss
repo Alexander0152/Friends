@@ -6,8 +6,9 @@
   &__wrapper {
     max-width: 714px;
     margin: auto;
-    background-color: $c-white;
+    background-color: $c-pink-white;
     color: $c-dark-pink;
+    border-radius: 8px;
   }
 
   &-title {
