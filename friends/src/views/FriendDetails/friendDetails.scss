@@ -1,6 +1,30 @@
+@import 'src/styles/colors';
+
 .friend-details {
   max-width: 608px;
   width: 100%;
   margin: 60px auto;
   box-sizing: border-box;
+  position: relative;
+
+  .friend-details__button-back{
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    left: -124px;
+    top: 0;
+    background-color: $c-white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+    img{
+      width: 16px;
+      height: 14px;
+    }
+
+    &:hover{
+      background-color: $c-dark-pink-fade;
+    }
+  }
 }

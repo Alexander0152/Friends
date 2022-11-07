@@ -1,9 +1,10 @@
 import React from 'react';
-import './app.scss';
 import { Route, Routes } from 'react-router-dom';
+import { ProtectedRoute } from 'components/shared/ProtectedRoute';
+
+import './app.scss';
 import routes from 'constants/routes';
 import { Main } from './views/Main';
-import { ProtectedRoute } from 'components/shared/ProtectedRoute';
 import { FriendDetails } from './views/FriendDetails';
 
 const {

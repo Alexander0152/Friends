@@ -17,13 +17,22 @@
   &__image {
     width: 150px;
     height: 150px;
-    background-color: red;
-    border-radius: 4px;
-    overflow: hidden;
+    position: relative;
+
+    .availability {
+      width: 23px;
+      height: 23px;
+      border-width: 4px;
+      border-radius: 12px;
+      left: -9px;
+      top: -9px;
+    }
 
     img {
       width: 100%;
       height: 100%;
+      border-radius: 4px;
+      overflow: hidden;
     }
   }
 
@@ -44,29 +53,178 @@
   display: flex;
   flex-direction: column;
 
-  &__box {
-    max-width: 100%;
-    max-height: 100%;
-    padding: 28px;
-    background: $c-white;
-    box-shadow: 0 10px 20px rgba(204, 208, 223, 0.5);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-  }
-
   &__switcher {
     display: flex;
+    grid-gap: 10px;
   }
 
   &__toggle {
+    width: 65px;
+    height: 30px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
     color: $c-black-fade;
+    cursor: pointer;
+
+    &_active {
+      border-bottom: 2px solid #000000;
+    }
+  }
+
+  &__box {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 10px;
+    background: $c-white;
+    box-shadow: $bs-black;
+    border-radius: 8px;
+  }
+}
+
+.friend-details-info {
+  &__box {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-gap: 56px;
+    padding: 28px;
+  }
+
+  &__section {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 14px;
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+
+    &:before {
+      height: 0;
+      width: 100%;
+      content: "";
+      position: absolute;
+      border: 1px solid rgba($c-dark-pink, 0.5);
+      margin: -28px auto;
+    }
+
+    &-item {
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      &-column {
+        display: block;
+
+        .friend-details-info__section-text {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &-title {
+      width: 228px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: $c-dark-pink;
+      margin-right: 10px;
+    }
+
+    &-text {
+      min-width: 184px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $c-black;
+    }
+  }
+}
+
+.friend-details-photos {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  grid-gap: 20px;
+  padding: 20px;
+
+  .visible{
+    display: initial;
+  }
+
+  &__button-close {
+    position: fixed;
+    top: 60px;
+    right: 60px;
+    width: 44px;
+    height: 44px;
+    background: rgba($c-white, 0.1);
+    border-radius: 8px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    img {
+      width: 11px;
+      height: 11px;
+    }
+
+    &:hover{
+      background: rgba($c-white, 0.3);
+    }
+  }
+
+  &__modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba($c-purple, 0.9);
+  }
+
+  &__modal-content {
+    margin: 184px auto;
+    border: 1px solid #888;
+    width: 985px;
+    height: 656px;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+  &__image {
+    width: 136px;
+    height: 136px;
+    background-color: red;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }

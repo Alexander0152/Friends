@@ -20,11 +20,18 @@
   &__image {
     width: 60px;
     height: 60px;
-    border-radius: 4px;
+    position: relative;
 
     img {
       width: 100%;
       height: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .availability {
+      left: -4px;
+      top: -4px;
     }
   }
 
@@ -65,5 +72,6 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    cursor: pointer;
   }
 }
