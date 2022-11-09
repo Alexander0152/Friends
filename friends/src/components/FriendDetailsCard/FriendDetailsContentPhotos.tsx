@@ -2,7 +2,7 @@ import React, { useMemo, useRef } from 'react';
 
 import './friendDetailsCard.scss'
 import closeButton from 'assets/icons/closeButton.svg';
-import people from 'assets/images/people.png'
+import bird from 'assets/images/bird.jpg'
 
 interface Props {
     photos: string[];
@@ -45,7 +45,7 @@ export const FriendDetailsContentPhotos = ({ photos }: Props) => {
             </div>
             <div ref={imageModal} className="friend-details-photos__modal">
                 <div className="friend-details-photos__modal-content">
-                    <img src={people}/>
+                    <img src={bird}/>
                 </div>
             </div>
 

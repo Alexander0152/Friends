@@ -4,8 +4,12 @@ import { ProtectedRoute } from 'components/shared/ProtectedRoute';
 
 import './app.scss';
 import routes from 'constants/routes';
-import { Main } from './views/Main';
-import { FriendDetails } from './views/FriendDetails';
+import { Main } from 'views/Main';
+import { FriendDetails } from 'views/FriendDetails';
+import { ErrorBoundary } from 'components/ErrorBoundary';
+import { useAppSelector } from 'hooks';
+import { CustomSpinner } from 'components/shared/CustomSpinner';
+import { selectIsAppLoading } from 'store/App/appSelectors';
 
 const {
     MAIN_ROUTE,
@@ -13,19 +17,24 @@ const {
 } = routes;
 
 export const App = () => {
+    const isAppLoading = useAppSelector(selectIsAppLoading);
+
     return (
-        <Routes>
-            <Route path={MAIN_ROUTE} element={
-                <ProtectedRoute>
-                    <Main/>
-                </ProtectedRoute>
-            }/>
-            <Route path={`${FRIEND_ROUTE}/:id`} element={
-                <ProtectedRoute>
-                    <FriendDetails/>
-                </ProtectedRoute>
-            }/>
-        </Routes>
+        <ErrorBoundary>
+            {isAppLoading && <CustomSpinner/>}
+            <Routes>
+                <Route path={MAIN_ROUTE} element={
+                    <ProtectedRoute>
+                        <Main/>
+                    </ProtectedRoute>
+                }/>
+                <Route path={`${FRIEND_ROUTE}/:id`} element={
+                    <ProtectedRoute>
+                        <FriendDetails/>
+                    </ProtectedRoute>
+                }/>
+            </Routes>
+        </ErrorBoundary>
     );
 }
 
