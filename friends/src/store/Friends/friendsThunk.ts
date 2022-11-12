@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import friendsService from 'services/friendsServices';
+import friendsService from 'services/friendsService';
 import apiWrapper from 'services/apiWrapper';
 import loadingService from 'services/loadingService';
 import { IFriend } from './friendsTypes';
@@ -29,7 +29,7 @@ export const getFriendsThunk = createAsyncThunk('/friendsList',
     });
 
 export const getFriendDetailsThunk = createAsyncThunk('/friendsDetails',
-    async (friendId: number) => {
+    async (friendId: string) => {
         return await apiWrapper.showLoader(friendsService.getFriendDetails(friendId)
                 .then((res) =>
                     ({

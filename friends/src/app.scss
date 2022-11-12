@@ -2,10 +2,10 @@
 @import 'styles/fonts';
 
 body {
-  background-color: $c-pink;
+  margin: 0;
   font-family: $font-family;
   font-style: $font-style;
-  margin: 0;
+  background-color: $c-pink;
 }
 
 .page {
@@ -18,16 +18,16 @@ body {
   padding: 0 8px;
   font-weight: 500;
   font-size: 12px;
-  line-height: 24px;
+  line-height: 22px;
   border: 1px solid $c-dark-pink;
   border-radius: 20px;
   color: $c-dark-pink;
 }
 
 .availability {
+  position: absolute;
   width: 12px;
   height: 12px;
-  position: absolute;
   background: $c-dark-pink;
   border: 2px solid $c-pink;
   box-sizing: border-box;

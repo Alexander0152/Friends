@@ -28,7 +28,7 @@ export const App = () => {
                         <Main/>
                     </ProtectedRoute>
                 }/>
-                <Route path={`${FRIEND_ROUTE}/:id`} element={
+                <Route path={`${FRIEND_ROUTE}/:friendId`} element={
                     <ProtectedRoute>
                         <FriendDetails/>
                     </ProtectedRoute>

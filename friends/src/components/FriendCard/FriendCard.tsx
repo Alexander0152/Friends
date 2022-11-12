@@ -13,7 +13,7 @@ interface Props {
 export const FriendCard = ({ friend, handleDetailsClick }: Props) => {
 
     return (
-        <div className="friend-card">
+        <div data-testid="friendCard" className="friend-card">
             <div className="friend-card__container">
                 <div className="friend-card__content">
                     <div className="friend-card__image">

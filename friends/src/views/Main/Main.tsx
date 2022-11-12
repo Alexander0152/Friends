@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './main.scss';
 import { FriendCard } from 'components/FriendCard';
 import { useAppDispatch, useAppSelector } from 'hooks';
 import { getFriendsThunk } from 'store/Friends/friendsThunk';
-import { useNavigate } from 'react-router-dom';
-import { setCurrentFriendId } from 'store/Friends';
-import routes from '../../constants/routes';
+import routes from 'constants/routes';
 
 const {
     FRIEND_ROUTE
@@ -21,7 +21,6 @@ export const Main = () => {
     }, []);
 
     const handleDetailsClick = (friendId: number) => {
-        dispatch(setCurrentFriendId(friendId));
         navigate(`${FRIEND_ROUTE}/${friendId}`);
     };
 

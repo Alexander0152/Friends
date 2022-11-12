@@ -1,6 +1,5 @@
 export interface IFriendsStateType {
     friendsList: IFriend[] | [];
-    currentFriendId: number | null;
     currentFriendDetails: IFriendDetails | null;
 }
 
