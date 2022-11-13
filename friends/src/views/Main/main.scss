@@ -1,0 +1,50 @@
+@import 'src/styles/colors';
+
+.friends-list {
+  margin: 195px auto;
+
+  &__wrapper {
+    max-width: 714px;
+    margin: auto;
+    background-color: $c-pink-white;
+    color: $c-dark-pink;
+    border-radius: 8px;
+  }
+
+  &-title {
+    margin: 0;
+    padding: 30px 40px 14px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 24px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 100%;
+    max-height: 556px;
+    padding: 10px 35px 0 40px;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-color: $c-dark-pink $c-dark-pink-fade;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: $c-dark-pink-fade;
+      border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $c-dark-pink;
+      border-radius: 8px;
+      opacity: 0.3;
+    }
+
+  }
+}
