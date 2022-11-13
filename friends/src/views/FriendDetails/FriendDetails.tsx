@@ -26,7 +26,7 @@ export const FriendDetails = () => {
     }, []);
 
     return (
-        <div className="friend-details">
+        <div data-testid="friend-details" className="friend-details">
             <button className="friend-details__button-back" onClick={() => navigate(MAIN_ROUTE)}>
                 <img src={leftArrow}/>
             </button>

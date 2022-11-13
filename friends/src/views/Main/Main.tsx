@@ -30,9 +30,9 @@ export const Main = () => {
 
 
     return (
-        <div className="friends-list">
+        <div data-testid="main-page" className="friends-list">
             <div className="friends-list__wrapper">
-                <p className="friends-list-title">Friends</p>
+                <p data-testid="main-page-title" className="friends-list-title">Friends</p>
                 <div className="friends-list__container">
                     {friendsList && friendCards}
                 </div>
